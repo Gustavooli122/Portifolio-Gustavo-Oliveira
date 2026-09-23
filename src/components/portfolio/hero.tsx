@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react"
 import { ArrowRight, ArrowDown } from "lucide-react"
-import { personal } from "@/lib/data"
+import { personal } from "../../lib/data"
 
 const container = {
   hidden: {},
@@ -17,6 +17,8 @@ const item = {
 }
 
 export function Hero() {
+  const email =
+  `https://mail.google.com/mail/?view=cm&fs=1&to=${personal.email}&su=Contato%20pelo%20portfólio&body=Olá!%20Encontrei%20seu%20portfólio%20e%20gostei%20do%20seu%20trabalho.%20Gostaria%20de%20conversar%20sobre%20um%20possível%20projeto%20ou%20oportunidade.`
   return (
     <section
       id="hero"
@@ -79,7 +81,7 @@ export function Hero() {
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
-              href="#contato"
+              href={email}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
               Entrar em Contato

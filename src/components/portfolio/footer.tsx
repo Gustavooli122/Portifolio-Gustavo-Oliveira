@@ -1,4 +1,4 @@
-import { personal, socials } from "@/lib/data"
+import { personal, socials} from "../../lib/data"
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -10,23 +10,26 @@ export function Footer() {
           © {year} {personal.name}. Todos os direitos reservados.
         </p>
 
-        <div className="flex items-center gap-3">
-          {socials.map((social) => {
-            const Icon = social.icon
-            return (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-                className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
-              >
-                <Icon className="size-4" />
-              </a>
-            )
-          })}
-        </div>
+       <div className="flex items-center gap-3">
+
+  {socials.map((social) => {
+    const Icon = social.icon
+    const isEmail = social.href.startsWith("mailto:")
+
+    return (
+      <a
+        key={social.label}
+        href={social.href}
+        target={isEmail ? undefined : "_blank"}
+        rel={isEmail ? undefined : "noopener noreferrer"}
+        aria-label={social.label}
+        className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary/50 hover:text-primary"
+      >
+        <Icon className="size-4" />
+      </a>
+    )
+  })}
+</div>
       </div>
     </footer>
   )

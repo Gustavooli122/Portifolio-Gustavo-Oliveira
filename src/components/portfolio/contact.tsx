@@ -1,6 +1,6 @@
 import { Mail, ArrowUpRight } from "lucide-react"
-import { GithubIcon, LinkedinIcon } from "@/components/icons"
-import { personal } from "@/lib/data"
+import { GithubIcon, LinkedinIcon } from "../icons"
+import { personal } from "../../lib/data"
 import { Reveal } from "./reveal"
 import { SectionHeading } from "./section-heading"
 

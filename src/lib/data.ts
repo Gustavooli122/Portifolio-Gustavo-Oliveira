@@ -1,4 +1,5 @@
 import type { ComponentType, SVGProps } from "react"
+import { Mail } from "lucide-react"
 import {
   Braces,
   GitBranch,
@@ -12,7 +13,7 @@ import {
   Smartphone,
   Component,
 } from "lucide-react"
-import { GithubIcon, LinkedinIcon } from "@/components/icons"
+import { GithubIcon, LinkedinIcon } from "../components/icons"
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>
 
@@ -21,10 +22,10 @@ type IconType = ComponentType<SVGProps<SVGSVGElement>>
 /* ------------------------------------------------------------------ */
 export const personal = {
   name: "Gustavo Oliveira",
-  role: "Desenvolvedor Front-end/backend",
+  role: "Desenvolvedor Front-end",
   shortBio:
     "Construo interfaces modernas, acessíveis e performáticas que transformam ideias em experiências digitais memoráveis.",
-  email: "gustavo.oliveira.souza.dev@email.com",
+  email: "gustavo.oliveira.souza.dev@gmail.com",
   github: "https://github.com/Gustavooli122",
   linkedin: "https://www.linkedin.com/in/gustavo-oliveira-6a6433305/",
 }
@@ -56,10 +57,7 @@ export const technologies: Technology[] = [
   { name: "Tailwind CSS", icon: Palette },
   { name: "CSS3", icon: Code2 },
   { name: "HTML5", icon: Globe },
-  { name: "Git", icon: GitBranch },
-  { name: "SQL", icon: GithubIcon },
-  { name: "postGREESQL", icon: GithubIcon },
-  { name: "API router (Next.js)", icon: GithubIcon },
+  { name: "Git", icon: GitBranch }
 ]
 
 /* ------------------------------------------------------------------ */
@@ -75,44 +73,65 @@ export type Project = {
 }
 
 export const projects: Project[] = [
-  {
-    title: "Dashboard de Analytics",
+   {
+    title: "Clareia",
     description:
-      "Painel de análise de dados em tempo real com gráficos interativos, filtros dinâmicos e visualizações responsivas.",
-    image: "/projects/dashboard.png",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Recharts"],
-    github: "https://github.com/joaosilva/analytics-dashboard",
-    demo: "https://analytics.exemplo.com",
+      "Construtor visual de páginas profissionais com modelos prontos, personalização de estilos e visualização responsiva em tempo real.",
+    image: "/projetos/clarea.png",
+    technologies: ["Next.js", "React", "Tailwind CSS","JavaScript"],
+    github: "https://github.com/Gustavooli122/site-para-psicologos",
+    demo: "https://gerador-de-pagina-pscologos.vercel.app/",
   },
   {
-    title: "Loja E-commerce",
+    title: "Artora",
     description:
-      "Storefront completo com carrinho, checkout e catálogo de produtos, focado em performance e conversão.",
-    image: "/projects/ecommerce.png",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Stripe"],
-    github: "https://github.com/joaosilva/ecommerce",
-    demo: "https://loja.exemplo.com",
+      "Plataforma de conteúdo e produtos voltada para desenho, arte e papelaria, desenvolvida com foco em SEO e experiência do usuário.",
+    image: "/projetos/artora.png",
+    technologies: ["Next.js", "React", "Tailwind CSS","JavaScript"],
+    github: "https://github.com/Gustavooli122/Artora-next/",
+    demo: "https://artora.company",
   },
-  {
-    title: "Gerenciador de Tarefas",
-    description:
-      "Aplicativo de produtividade estilo Kanban com arrastar-e-soltar, colaboração e sincronização em tempo real.",
-    image: "/projects/taskapp.png",
-    technologies: ["React", "JavaScript", "CSS3"],
-    github: "https://github.com/joaosilva/task-manager",
-    demo: "https://tarefas.exemplo.com",
-  },
-  {
-    title: "App de Clima",
-    description:
-      "Previsão do tempo com design glassmorphism, busca por cidade e previsão horária consumindo API externa.",
-    image: "/projects/weather.png",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
-    github: "https://github.com/joaosilva/weather-app",
-    demo: "https://clima.exemplo.com",
-  },
-]
 
+  {
+    title: "Weather Now",
+    description:
+      "Aplicação de previsão do tempo com busca por cidade, previsão horária e diária e conversão entre diferentes unidades de medida.",
+    image: "/projetos/weather.png",
+    technologies: ["Next.js", "React", "Tailwind CSS","JavaScript"],
+    github: "https://github.com/Gustavooli122/Previsao-de-tempo/",
+    demo: "https://previsao-de-tempo-three.vercel.app",
+  },
+
+  {
+    title: "Gerador de Senhas",
+    description:
+      "Gerador de senhas personalizáveis com controle de tamanho, tipos de caracteres e opção para copiar a senha gerada.",
+    image: "/projetos/gerador-de-senhas.png",
+    technologies: ["Next.js", "React", "Tailwind CSS","JavaScript"],
+    github: "https://github.com/Gustavooli122/generatorPassword",
+    demo: "https://generator-password-henna.vercel.app/",
+  },
+
+  {
+    title: "Calculadora",
+    description:
+      "Calculadora responsiva para operações matemáticas básicas, desenvolvida com uma interface simples, moderna e intuitiva.",
+    image: "/projetos/calculadora.png",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    github: "https://github.com/Gustavooli122/cal",
+    demo: "https://cal-ruddy-tau.vercel.app/",
+  },
+
+    {
+    title: "Evolução Dev",
+    description:
+      "Blog sobre programação e desenvolvimento web, com artigos organizados por categorias, busca de conteúdo e interface responsiva.",
+    image: "/projetos/site-de-blogs.png",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    github: "https://github.com/Gustavooli122/projeto-blog",
+    demo: "https://evolucao-dev.vercel.app/",
+  },
+];
 /* ------------------------------------------------------------------ */
 /*  HABILIDADES                                                        */
 /* ------------------------------------------------------------------ */
@@ -177,4 +196,9 @@ export type Social = {
 export const socials: Social[] = [
   { label: "GitHub", href: personal.github, icon: GithubIcon },
   { label: "LinkedIn", href: personal.linkedin, icon: LinkedinIcon },
+  {
+    label: "Email",
+    href: personal.email,
+    icon: Mail,
+  },
 ]
