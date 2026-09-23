@@ -42,7 +42,7 @@ export function Hero() {
         >
           <motion.p
             variants={item}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 font-mono text-xs font-medium text-muted-foreground"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5 font-mono text-xs font-medium text-muted-foreground"
           >
             <span className="relative flex size-2">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-75" />
@@ -50,14 +50,18 @@ export function Hero() {
             </span>
             Disponível para novos projetos
           </motion.p>
-
+          <motion.div className="flex sm:flex-row flex-col sm:items-center gap-8 w-full">
+            <img src="https://avatars.githubusercontent.com/u/183777939?v=4" alt="Imagem do desenvolvedor"  className="rounded-full w-24 sm:w-28 md:w-40 lg:w-44"/> 
           <motion.h1
             variants={item}
-            className="text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
+            className="text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl"
           >
-            Olá, eu sou <span className="text-primary">{personal.name}</span>
+            
+         Olá, eu sou <span className="text-primary">{personal.name}</span>
           </motion.h1>
 
+          </motion.div>
+ 
           <motion.p
             variants={item}
             className="mt-4 font-mono text-lg text-muted-foreground sm:text-xl"
