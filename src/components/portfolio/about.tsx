@@ -4,7 +4,7 @@ import { SectionHeading } from "./section-heading"
 const stats = [
   { value: "3+", label: "Anos de experiência" },
   { value: "20+", label: "Projetos concluídos" },
-  { value: "15+", label: "Clientes satisfeitos" },
+  { value: "5+", label: "Projetos publicados" },
 ]
 
 export function About() {
