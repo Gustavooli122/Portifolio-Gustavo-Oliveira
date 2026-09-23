@@ -35,35 +35,41 @@ export function Contact() {
           description="Estou sempre aberto a novas oportunidades e conversas. Escolha o canal que preferir."
         />
 
-        <div className="mx-auto grid max-w-3xl gap-4 sm:grid-cols-3">
-          {channels.map((channel, i) => {
-            const Icon = channel.icon
-            const isExternal = channel.href.startsWith("http")
-            return (
-              <Reveal key={channel.label} delay={i * 0.1}>
-                <a
-                  href={channel.href}
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noopener noreferrer" : undefined}
-                  className="group flex h-full flex-col justify-between gap-8 rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="grid size-11 place-items-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                      <Icon className="size-5" />
-                    </span>
-                    <ArrowUpRight className="size-5 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold">{channel.label}</p>
-                    <p className="mt-1 truncate text-sm text-muted-foreground">
-                      {channel.value}
-                    </p>
-                  </div>
-                </a>
-              </Reveal>
-            )
-          })}
-        </div>
+       <div className="mx-auto grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
+  {channels.map((channel, i) => {
+    const Icon = channel.icon
+    const isExternal = channel.href.startsWith("http")
+
+    return (
+      <Reveal key={channel.label} delay={i * 0.1}>
+        <a
+          href={channel.href}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          className="group flex h-full w-full min-w-0 flex-col justify-between gap-8 overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50"
+        >
+          <div className="flex min-w-0 items-center justify-between">
+            <span className="grid shrink-0 place-items-center rounded-xl bg-secondary text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+              <Icon className="size-5" />
+            </span>
+
+            <ArrowUpRight className="size-5 shrink-0 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" />
+          </div>
+
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold">
+              {channel.label}
+            </p>
+
+            <p className="mt-1 truncate text-sm text-muted-foreground">
+              {channel.value}
+            </p>
+          </div>
+        </a>
+      </Reveal>
+    )
+  })}
+</div>
 
         <Reveal delay={0.2} className="mt-10 text-center">
           <a

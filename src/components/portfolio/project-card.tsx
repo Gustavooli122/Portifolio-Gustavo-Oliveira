@@ -43,12 +43,12 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           ))}
         </ul>
 
-        <div className="mt-6 flex items-center gap-3">
+        <div className="mt-6 flex sm:flex-row flex-col items-center gap-3">
           <a
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+            className="group/btn inline-flex flex-1 items-center justify-center gap-1.5 w-full sm:w-auto rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
           >
             Ver Projeto
             <ArrowUpRight className="size-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
@@ -58,7 +58,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Repositório do projeto ${project.title} no GitHub`}
-            className="inline-flex items-center justify-center gap-1.5 rounded-full border border-border bg-secondary/40 px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
+            className="inline-flex items-center w-full sm:w-auto justify-center gap-1.5 rounded-full border border-border bg-secondary/40 px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
           >
             <GithubIcon className="size-4" />
             GitHub
